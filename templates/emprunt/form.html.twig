@@ -1,0 +1,13 @@
+{# templates/emprunt/form.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Recherche d'emprunts par date</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.start_date) }}
+    {{ form_row(form.end_date) }}
+    {{ form_row(form.submit) }}
+    {{ form_end(form) }}
+{% endblock %}

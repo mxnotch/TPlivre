@@ -3,3 +3,15 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+app_livre_by_auteur:
+    path: '/livre/auteur/{id}'
+    controller: App\Controller\LivreController::findByAuteur
+
+app_emprunt_index:
+    path: /emprunts
+    controller: App\Controller\EmpruntController::index
+
+app_emprunts_par_date:
+    path: /emprunts-par-date
+    controller: App\Controller\EmpruntController::empruntsParDate

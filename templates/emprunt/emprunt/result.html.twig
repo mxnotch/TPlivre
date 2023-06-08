@@ -1,0 +1,14 @@
+{# templates/emprunt/result.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Résultat de la recherche</h1>
+
+    {% if count is defined %}
+        <p>Période : {{ start_date|date('d/m/Y') }} - {{ end_date|date('d/m/Y') }}</p>
+        <p>Nombre d'emprunts : {{ count }}</p>
+    {% else %}
+        <p>Aucun résultat trouvé.</p>
+    {% endif %}
+{% endblock %}

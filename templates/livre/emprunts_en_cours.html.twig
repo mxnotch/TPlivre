@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Livres en cours d'emprunt{% endblock %}
+
+{% block body %}
+    <h1>Livres en cours d'emprunt</h1>
+
+    {% if livres is empty %}
+        <p>Aucun livre n'est actuellement emprunté.</p>
+    {% else %}
+        <ul>
+            {% for livre in livres %}
+                <li>{{ livre.titre }} - {{ livre.auteur.nom }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
